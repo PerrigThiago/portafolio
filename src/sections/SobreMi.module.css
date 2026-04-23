@@ -39,39 +39,77 @@
   margin-bottom: 1rem;
 }
 
-.skills {
+/* Idioma */
+.langBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.langBadge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--c6);
+  background: var(--c3);
+  border: 1px solid var(--c4);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+}
+
+.langNote {
+  font-size: 0.8rem;
+  color: var(--c5);
+  font-style: italic;
+}
+
+/* Tecnologías */
+.skillsBlock {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.skillItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+.skillsTitle {
+  font-size: 0.73rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c5);
+  font-weight: 700;
 }
 
-.skillHeader {
+.chips {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--c5);
-  letter-spacing: 0.04em;
+  background: var(--c2);
+  border: 1px solid var(--c3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.skillBar {
-  height: 4px;
+.chip:hover {
+  color: var(--c6);
   background: var(--c3);
-  border-radius: 2px;
-  overflow: hidden;
+  border-color: var(--c4);
 }
 
-.skillFill {
-  height: 100%;
-  background: var(--c6);
-  border-radius: 2px;
-  transition: width 1s ease;
+.chipEmoji {
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 @media (max-width: 640px) {

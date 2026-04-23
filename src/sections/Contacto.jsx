@@ -1,14 +1,37 @@
 import { useState } from 'react'
 import styles from './Contacto.module.css'
 
-export default function Contacto() {
-  const [sent, setSent] = useState(false)
+const FORMSPREE_URL = 'https://formspree.io/f/mnjllqnp' // ← reemplazá con tu ID de Formspree
 
-  const handleSubmit = (e) => {
+export default function Contacto() {
+  const [status, setStatus] = useState('idle') 
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Conectá aquí EmailJS, Formspree, o tu propio backend
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
+    setStatus('sending')
+
+    const form = e.target
+    const data = new FormData(form)
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+
+      if (res.ok) {
+        setStatus('sent')
+        form.reset()
+        setTimeout(() => setStatus('idle'), 5000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 4000)
+      }
+    } catch {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   return (
@@ -23,18 +46,21 @@ export default function Contacto() {
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.group}>
           <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre" required />
+          <input name="name" type="text" placeholder="Tu nombre" required />
         </div>
         <div className={styles.group}>
           <label>Email</label>
-          <input type="email" placeholder="tu@mail.com" required />
+          <input name="email" type="email" placeholder="tu@mail.com" required />
         </div>
         <div className={styles.group}>
           <label>Mensaje</label>
-          <textarea placeholder="Contame sobre tu proyecto..." required />
+          <textarea name="message" placeholder="Contame sobre tu proyecto..." required />
         </div>
-        <button className={styles.btnSend} type="submit">
-          {sent ? '¡Enviado!' : 'Enviar mensaje'}
+        <button className={styles.btnSend} type="submit" disabled={status === 'sending'}>
+          {status === 'sending' && 'Enviando...'}
+          {status === 'sent'    && '¡Mensaje enviado!'}
+          {status === 'error'   && 'Error, intentá de nuevo'}
+          {status === 'idle'    && 'Enviar mensaje'}
         </button>
       </form>
 
