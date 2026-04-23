@@ -1,0 +1,88 @@
+.section {
+  min-height: 100vh;
+  padding: 6rem 2.5rem 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c5);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.decoLine {
+  width: 56px;
+  height: 3px;
+  background: var(--c6);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-family: var(--font-title);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1.06;
+  color: var(--c6);
+  margin-bottom: 1.25rem;
+}
+
+.name {
+  color: var(--c5);
+}
+
+.sub {
+  font-size: 1.05rem;
+  color: var(--c5);
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btnPrimary {
+  background: var(--c6);
+  color: var(--c1);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.82;
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--c5);
+  border: 1px solid var(--c4);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btnGhost:hover {
+  color: var(--c6);
+  border-color: var(--c5);
+}

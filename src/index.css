@@ -1,0 +1,44 @@
+/* ── Variables ── */
+:root {
+  --c1: #06141B;
+  --c2: #11212D;
+  --c3: #253745;
+  --c4: #4A5C6A;
+  --c5: #9BA8AB;
+  --c6: #CCDDCF;
+
+  --font-title: 'Roboto', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--c1);
+  color: var(--c6);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+input, textarea {
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+}

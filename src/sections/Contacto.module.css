@@ -1,0 +1,125 @@
+.section {
+  min-height: 100vh;
+  padding: 6rem 2.5rem 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  font-size: 0.73rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c5);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.heading {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--c6);
+  margin-bottom: 0.75rem;
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--c5);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 520px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.group label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--c5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.group input,
+.group textarea {
+  background: var(--c2);
+  border: 1px solid var(--c3);
+  border-radius: 8px;
+  color: var(--c6);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+
+.group input::placeholder,
+.group textarea::placeholder {
+  color: var(--c4);
+}
+
+.group input:focus,
+.group textarea:focus {
+  border-color: var(--c5);
+}
+
+.group textarea {
+  min-height: 130px;
+}
+
+.btnSend {
+  align-self: flex-start;
+  background: var(--c6);
+  color: var(--c1);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.btnSend:hover {
+  opacity: 0.82;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.socialLink {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--c5);
+  border: 1px solid var(--c3);
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--c6);
+  border-color: var(--c5);
+}
