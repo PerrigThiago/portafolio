@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './Contacto.module.css'
 
-const FORMSPREE_URL = 'https://formspree.io/f/mnjllqnp' // ← reemplazá con tu ID de Formspree
+const FORMSPREE_URL = 'https://formspree.io/f/mnjllqnp'
 
 export default function Contacto() {
   const [status, setStatus] = useState('idle') 
