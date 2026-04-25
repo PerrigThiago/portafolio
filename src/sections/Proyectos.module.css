@@ -47,10 +47,15 @@
   transform: translateY(-4px);
 }
 
-.linkIcon {
+.cardIcons {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.linkIcon {
   color: var(--c4);
   background: var(--c3);
   border: 1px solid var(--c4);
