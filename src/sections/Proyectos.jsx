@@ -8,7 +8,7 @@ const PROJECTS = [
     desc: 'Aplicación para registrar, verificar y validar usuarios con gmail.',
     chips: ['JavaScript', 'React', 'Express', 'PostgreSQL', 'Neon'],
     url: 'login-registro-five.vercel.app',
-    repo: 'https://github.com/PerrigThiago/login-registro', // ← reemplazá con tu repo
+    repo: 'https://github.com/PerrigThiago', // ← reemplazá con tu repo
   },
   {
     num: '02',
@@ -17,7 +17,7 @@ const PROJECTS = [
     desc: 'Aplicación de automatizacion de turnos digitales.',
     chips: ['JavaScript','React', 'Express', 'PostgreSQL', 'Neon'],
     url: 'https://sistema-de-turnos-x23u.vercel.app/',
-    repo: 'https://github.com/PerrigThiago/turnero', // ← reemplazá con tu repo
+    repo: 'https://github.com/PerrigThiago', // ← reemplazá con tu repo
   },
   {
     num: '03',
@@ -26,7 +26,7 @@ const PROJECTS = [
     desc: 'Aplicación para ventas de productos. Ofrece tambien control, notificacion y seguimiento de los productos y el stock.',
     chips: ['JavaScript', 'React', 'Express', 'PostgreSQL', 'Neon'],
     url: 'https://tu-deploy-3.vercel.app',
-    repo: 'https://github.com/PerrigThiago/repo-3', // ← reemplazá con tu repo
+    repo: 'https://github.com/PerrigThiago', // ← reemplazá con tu repo
   },
   {
     num: '04',
@@ -35,7 +35,7 @@ const PROJECTS = [
     desc: 'Aplicación de pedidos de comidas para rotiseria.',
     chips: ['TypeScript', 'React', 'Express', 'PostgreSQL', 'Supabase'],
     url: 'https://tu-deploy-4.vercel.app',
-    repo: 'https://github.com/PerrigThiago/repo-4', // ← reemplazá con tu repo
+    repo: 'https://github.com/PerrigThiago', // ← reemplazá con tu repo
   },
 ]
 
