@@ -1,19 +1,29 @@
 import styles from './SobreMi.module.css'
+import { FaReact } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaPython } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiSpring } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { GiBookshelf } from "react-icons/gi";
 
 const SKILLS = [
-  { label: 'React / Vite',  emoji: '⚛️' },
-  { label: 'Java',          emoji: '☕' },
-  { label: 'TypeScript',    emoji: '🔷' },
-  { label: 'JavaScript',    emoji: '🟨' },
-  { label: 'Python',        emoji: '🐍' },
-  { label: 'Node.js',       emoji: '🟢' },
-  { label: 'Express.js',    emoji: '🚂' },
-  { label: 'Next.js',       emoji: '▲' },
-  { label: 'Spring Boot',   emoji: '🍃' },
-  { label: 'PostgreSQL',    emoji: '🐘' },
-  { label: 'CSS',           emoji: '🎨' },
-  { label: 'HTML',          emoji: '🌐' },
-  { label: 'Tailwind CSS',  emoji: '💨' },
+  { label: 'React / Vite',  emoji: <FaReact /> },
+  { label: 'Java',          emoji: <FaJava /> },
+  { label: 'TypeScript',    emoji: <SiTypescript /> },
+  { label: 'JavaScript',    emoji: <IoLogoJavascript /> },
+  { label: 'Python',        emoji: <FaPython /> },
+  { label: 'Node.js',       emoji: <FaNodeJs /> },
+  { label: 'Express.js',    emoji: <SiExpress /> },
+  { label: 'Spring Boot',   emoji: <SiSpring /> },
+  { label: 'PostgreSQL',    emoji: <BiLogoPostgresql /> },
+  { label: 'CSS',           emoji: <FaCss3Alt /> },
+  { label: 'HTML',          emoji: <FaHtml5 /> },
 ]
 
 export default function SobreMi() {
@@ -29,7 +39,7 @@ export default function SobreMi() {
           <p>Mantengo un enfoque de aprendizaje constante basado en la práctica, priorizando buenas prácticas y el desarrollo de código limpio y mantenible.</p>
 
           <div className={styles.langBlock}>
-            <span className={styles.langBadge}>📚 Inglés B1</span>
+            <span className={styles.langBadge}> <GiBookshelf /> Inglés B1</span>
             <span className={styles.langNote}>En proceso de mejora continua</span>
           </div>
         </div>
